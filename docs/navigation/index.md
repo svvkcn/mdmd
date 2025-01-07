@@ -1,15 +1,7 @@
----
-layout: home
+# 导航
 
+## 常用工具
 
-features:
-  - title: 导航收藏-链接
-    details: 导航收藏-链接
-    link: navigation/index
-  - title: 教程笔记-记录
-    details: 教程笔记-记录
-  - title: 服务实践
-    details: 服务实践
-  - title: AI战未来
-    details: AI战未来
----
+|图标|链接|
+|-|-|
+|![baidu-icon](https://www.baidu.com/favicon.ico)|[百度一下](www.baidu.com)|
