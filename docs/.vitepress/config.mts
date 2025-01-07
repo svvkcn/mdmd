@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+import { nav, sidebar } from './config/index'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "阿康自留地",
@@ -34,25 +36,14 @@ export default defineConfig({
         }
       }
     },
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '导航', link: '/navigation/index' }
-    ],
+    
+    nav,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/svvkcn/vitePress_svvkCn' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    sidebar,
 
     outline: {
       label: '页面导航',
@@ -64,6 +55,11 @@ export default defineConfig({
     darkModeSwitchLabel: '外观',
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
+
+    editLink: {
+      pattern: 'https://gitee.com/svvk/mdmd/blob/main/docs/:path',
+      text: '编辑此页面'
+    },
 
     lastUpdated: {
       text: '更新于：',
