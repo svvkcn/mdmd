@@ -1,18 +1,21 @@
 import { defineConfig } from 'vitepress'
 
-import { nav, sidebar } from './config/index'
+import { nav } from './configs'
+import { sidebar } from './configs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  outDir: '../dist',
   title: "阿康自留地",
   description: "个人兴趣",
   lang: 'zh-CN',
-  head: [['link', { rel: 'icon', href: './favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
   lastUpdated: true,
+  cleanUrls: true,
   themeConfig: {
     logo: {
-      light: './logo.png',
-      dark: './logo-dark.png',
+      light: '/logo.png',
+      dark: '/logo-dark.png',
       alt: 'logo',
     },
     siteTitle: false,
@@ -38,12 +41,11 @@ export default defineConfig({
     },
     
     nav,
+    sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/svvkcn/vitePress_svvkCn' }
     ],
-
-    sidebar,
 
     outline: {
       label: '页面导航',
